@@ -11,22 +11,22 @@ Cluedo o Clue es un juego de mesa popular que fue producido originalmente por la
 - Haz Fork del repositorio
 - Clónalo en tú área de trabajo local
 - Una vez resuelto:
-  
+
 ```
 $ git add .
 $ git commit -m "done"
 $ git push origin master
 ```
-- Haz Pull Request desde la master branch del repositorio con el nombre en la cabecera del mensaje. 
+
+- Haz Pull Request desde la master branch del repositorio con el nombre en la cabecera del mensaje.
 
 ## Ejercicio
 
-Escribe el JavaScript en el fichero `src/clue.js`. 
-
+Escribe el JavaScript en el fichero `src/clue.js`.
 
 ## Iteración 1 - <small>Crear las cartas</small>
 
-El Cluedo tiene tres tipos de cartas: *suspects*, *rooms*, and *weapons*. Los tres tipos de cartas siempre están separadas.
+El Cluedo tiene tres tipos de cartas: _suspects_, _rooms_, and _weapons_. Los tres tipos de cartas siempre están separadas.
 
 Para hacer esto, necesitarás conocer a los personajes (posibles asesinos), armas disponibles y habitaciones de la casa. Toda la información se encuentra disponible en el fichero `clue.js`.
 
@@ -36,11 +36,11 @@ Todos personajes tienen nombre, apellido, trabajo, edad, descripción e imagen.
 
 ### Armas disponibles
 
-Hay nueve armas. 
+Hay nueve armas.
 
 ### Habitaciones
 
-El juego representa el plano de una mansión y describe 15  habitaciones diferentes.
+El juego representa el plano de una mansión y describe 15 habitaciones diferentes.
 
 ### Estructura de los datos
 
@@ -52,26 +52,27 @@ Por ejemplo:
 
 ```javascript
 let mrGreen = {
-  // Properties
+      // Properties
 };
 
 let rope = {
-  // Properties
-}
+      // Properties
+};
 
 // etc
 ```
+
 Tendrás tres arrays: `charactersArray`, `weaponsArray` y `roomsArray`.
 
 ## Iteración 2 - <small>Crea el misterio</small>
 
-Al inicio del juego, los jugadores barajan los mazos de cartas para crear combinaciones de *suspect*, *weapon* y *room*. Este será el misterio a resolver.
+Al inicio del juego, los jugadores barajan los mazos de cartas para crear combinaciones de _suspect_, _weapon_ y _room_. Este será el misterio a resolver.
 
 ### Los TESTS!
 
-El ejercicio constará de un test que se correrá mediante el fichero `SpecRunner.html`. 
+El ejercicio constará de un test que se correrá mediante el fichero `SpecRunner.html`.
 
-### Random Selector 
+### Random Selector
 
 Crea un método `randomSelector` que seleccione de forma aleatoria un elemento del mazo de cartas. El método recibirá un `array` como argumento y devuelve un elemento random del array.
 
@@ -81,7 +82,7 @@ Crea un método `pickMistery` que llamará a `randomSelector` por cada mazo de c
 
 ## Iteración 3 - <small>Descubrir el misterio</small>
 
-Para revelar el misterio se ha de crear un método `revealMistery` que recibirá el array `misteryEnvelope` como argumento y devolverá un misterio revelado con este formato: 
+Para revelar el misterio se ha de crear un método `revealMistery` que recibirá el array `misteryEnvelope` como argumento y devolverá un misterio revelado con este formato:
 
 **\<FIRST NAME\> \<LAST NAME\> killed Mr.Boddy using the \<WEAPON\> in the \<PLACE\>!!!!**
 
